@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ListedItemView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            HStack{
+                
+                Color("secondBackground").frame(width: UIScreen.main.bounds.width/3.5,alignment: .center)
+                Color("firstBackground")
+            }
+            ScrollView(.vertical,showsIndicators: false){
+                
+            }
+        }.ignoresSafeArea(.all)
     }
 }
 
