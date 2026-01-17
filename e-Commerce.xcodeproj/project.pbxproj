@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229855A12F1C44F400E623C3 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229855A02F1C44F400E623C3 /* ItemCardView.swift */; };
 		22F5877D2EE7089D0018E1EC /* e_CommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5877C2EE7089D0018E1EC /* e_CommerceApp.swift */; };
 		22F587812EE708A00018E1EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F587802EE708A00018E1EC /* Assets.xcassets */; };
 		22F587842EE708A00018E1EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F587832EE708A00018E1EC /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		229855A02F1C44F400E623C3 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		22F587792EE7089D0018E1EC /* e-Commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5877C2EE7089D0018E1EC /* e_CommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_CommerceApp.swift; sourceTree = "<group>"; };
 		22F587802EE708A00018E1EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				22F587952EE70E100018E1EC /* DetailItemView.swift */,
 				22F587972EE70E3C0018E1EC /* CartItemView.swift */,
 				22F5879F2EE942350018E1EC /* ItemHeaderView.swift */,
+				229855A02F1C44F400E623C3 /* ItemCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				22F587922EE70D880018E1EC /* MainView.swift in Sources */,
 				22F5877D2EE7089D0018E1EC /* e_CommerceApp.swift in Sources */,
 				22F5879A2EE70E8A0018E1EC /* ChairViewModel.swift in Sources */,
+				229855A12F1C44F400E623C3 /* ItemCardView.swift in Sources */,
 				22F587942EE70DDE0018E1EC /* ListedItemView.swift in Sources */,
 				22F587982EE70E3C0018E1EC /* CartItemView.swift in Sources */,
 				22F587902EE70C9B0018E1EC /* chairModel.swift in Sources */,
