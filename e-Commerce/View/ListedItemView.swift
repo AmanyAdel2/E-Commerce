@@ -12,26 +12,28 @@ struct ListedItemView: View {
     @EnvironmentObject var vm : ChairViewModel
     @State var timer = Timer.TimerPublisher(interval: 2, runLoop: .main, mode: .common).autoconnect()
     var body: some View {
-        ZStack{
-            HStack{
-                
-                Color("secondBackground").frame(width: UIScreen.main.bounds.width/3.5,alignment: .center)
-                Color("firstBackground")
-            }
-            ScrollView(.vertical,showsIndicators: false){
-                headerView
-                Text("Trending").font(.system(size: 26,weight: .bold,design: .serif)).frame(maxWidth: .infinity,alignment: .leading).padding(.leading)
-                trendingItem
-                Text("Comming Soon").font(.system(size: 26,weight: .bold,design: .serif)).frame(maxWidth: .infinity,alignment: .leading).padding(.leading)
-                ComingSoonItem
-                
-                
-                
+        NavigationView {
+            ZStack{
+                HStack{
                     
-                
-                
-            }
-        }.ignoresSafeArea(.all)
+                    Color("secondBackground").frame(width: UIScreen.main.bounds.width/3.5,alignment: .center)
+                    Color("firstBackground")
+                }
+                ScrollView(.vertical,showsIndicators: false){
+                    headerView
+                    Text("Trending").font(.system(size: 26,weight: .bold,design: .serif)).frame(maxWidth: .infinity,alignment: .leading).padding(.leading)
+                    trendingItem
+                    Text("Comming Soon").font(.system(size: 26,weight: .bold,design: .serif)).frame(maxWidth: .infinity,alignment: .leading).padding(.leading)
+                    ComingSoonItem.padding(.bottom,90)
+                    
+                    
+                    
+                        
+                    
+                    
+                }
+            }.ignoresSafeArea(.all)
+        }
     }
 }
 
@@ -68,7 +70,13 @@ extension ListedItemView {
             HStack{
                 ForEach(vm.Chairs) { chair in
                     if chair.stateOnMarket == "trending"{
-                        ItemCardView(chair: chair).padding()
+                        NavigationLink {
+                            OtemDetailedView()
+                        } label: {
+                            ItemCardView(chair: chair).padding()
+                        }
+
+                        
                     }
                     
                 }
@@ -82,6 +90,7 @@ extension ListedItemView {
             HStack{
                 ForEach(vm.Chairs) { chair in
                     if chair.stateOnMarket == "comming soon"{
+                        
                         ItemCardView(chair: chair).padding()
                     }
                     
